@@ -21,14 +21,11 @@ This project involves a Google Apps Script that XXX.
 2. Copy the Google Sheet to make your sheet.
 3. **Conduct GAS Authorization**: Access `Initial Setting` Sheet and click the initial setting button. This enables you to go to the authorization page for Google Apps Script.
 
-<div style="margin-left: 30px">
-  <img src="assets/images/initial-setting.png" alt="Image of Initial Setting" width="200" height="100">
-</div>
+  <div style="margin-left: 30px">
+    <img src="assets/images/initial-setting.png" alt="Image of Initial Setting" width="200" height="100">
+  </div>{: .resize-image}
 
 4. **Customize Constant Variables for Built-in Functions**: Navigate to the Apps Script page and adjust the constant variables in `variables.gs` to suit your needs.
-<div style="margin-left: 30px">
-  <img src="assets/images/custom-variables.png" alt="Image of Variables Customization" width="300" height="100">
-</div>
 
 ## Usage
 
