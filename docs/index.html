@@ -1,0 +1,94 @@
+---
+layout: default
+title: 'Google Forms Response Management and Automation'
+---
+<body>
+    <div id="table-of-contents" class="sidebar">
+        <!-- Sidebar with Table of Contents -->
+        <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#others">Others</a></li>
+        </ul>
+    </div>
+
+    <h2 id="top">About this Project</h2>
+    <div>
+        This project focuses on automating response management for Google Forms using Google Apps Script. It includes scripts for updating course lineups, managing instructor lists, and processing form submissions to send automated emails. The aim is to simplify and streamline the process of handling form responses in educational or professional environments.
+    </div>
+    <ul>
+        <li><strong>Response Management:</strong> Scripts to automatically update form options based on spreadsheet data.</li>
+        <li><strong>Email Automation:</strong> Scripts to send notification emails based on form responses.</li>
+    </ul>
+    <div>
+        By automating these tasks, the scripts help in efficiently managing form responses and related communications.
+    </div>
+
+    <h2 id="prerequisites">Prerequisites</h2>
+    <ul>
+        <li>A Google account with access to Google Forms, Sheets, and Gmail.</li>
+        <li>Basic knowledge of Google Forms and Sheets.</li>
+        <li>Familiarity with Google Apps Script and JavaScript.</li>
+    </ul>
+
+    <h2 id="features">Sample</h2>
+    <div>
+        Click <a href="https://docs.google.com/spreadsheets/d/1yGVn-w6uhpvNWz4rK0l37hPGIsqSeeXpweF6Vq_ko04/edit#gid=0" target="_blank" rel="noopener noreferrer">HERE</a> to access the Drive folder that includes sample google form and spreadsheet for form responses which includes scripts.
+    </div>
+
+    <h2 id="features">Features</h2>
+    <ul>
+        <li><strong>Dynamic Form Updates</strong>: Automatically update form choices based on spreadsheet data.</li>
+        <li><strong>Automated Email Notifications</strong>: Send custom emails in response to form submissions that meet specific conditions.</li>
+        <li><strong>Form Submission Handling</strong>: Process form responses to trigger specific actions.</li>
+    </ul>
+
+    <h2 id="usage">Usage</h2>
+    <div>
+        To effectively use the automated Google Form response management scripts, follow these steps:
+    </div>
+    <ol>
+        <li>
+            <strong>Pre-define Information in Sheets:</strong> Input necessary information in advance in the following sheets:
+            <ul>
+                <li>'course-lineup' sheet: Enter course lineup for each program.</li>
+                <li>'instructor-lineup' sheet: Enter instructor lineup for each program.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Execute Functions and Update Google Form:</strong> Use the 'Update Course Lineup' and 'Update Instructor Lineup' functions to update item options in Google Form. Verify if the target items in the Google Form are updated successfully.
+            <ul>
+                <li>Update Course Lineup: Synchronize each program's course lineup from the Spreadsheet to the Google Form.</li>
+                <li>Update Instructor Lineup: Synchronize each program's instructor lineup from the Spreadsheet to the Google Form.</li>
+            </ul>
+            <div><img src="assets/images/enter-item-options.png" alt="Updated Google Form Items" width="450" height="250"></div>
+            <div><img src="assets/images/form-items-update.png" alt="Updated Google Form Items" width="450" height="250"></div>
+        </li>
+        <li>
+            <strong>Set Trigger for onFormSubmit:</strong> Navigate to 'Triggers' and set a trigger for the 'onFormSubmit' function.
+            <div><img src="assets/images/setup-trigger.png" alt="Trigger Setup" width="450" height="250"></div>
+        </li>
+        <li>
+            <strong>Test Form Submission:</strong> Ensure that the notification email is sent to respondents when a respondent chooses the same instructor twice.
+            <div><img src="assets/images/choose-instructors.png" alt="Email Notification Example" width="450" height="250"></div>
+            <div><img src="assets/images/email-notification.png" alt="Email Notification Example" width="450" height="250"></div>
+        </li>
+    </ol>
+    <div>
+        These steps guide you through setting up and testing the automated response management for your Google Form.
+    </div>
+
+    <h2 id="others">Others</h2>
+    <ul>
+        <li><strong>Customization</strong>: Copy relevant files to make your own and adapt the scripts to fit different types of forms and response processing needs.</li>
+        <li><strong>Debugging and Maintenance</strong>: Regular updates may be necessary to maintain compatibility with Google services.</li>
+        <li><strong>Extension</strong>: Advanced users can extend the scripts' functionalities by integrating additional Google APIs or adding more complex features.</li>
+    </ul>
+    <div>
+        This project offers a framework for managing Google Form responses efficiently, freeing up time and resources for more critical tasks.
+    </div>
+</body>
+</html>
