@@ -1,17 +1,14 @@
 {
-  "name": "gas-template",
+  "name": "form-manage-simplifier",
   "version": "1.0.0",
-  "description": "A personal template repository for creating a local dev environment using Google Apps Script, clasp, and github page",
-  "main": "src/sample.js",
-  "directories": {
-    "test": "tests"
-  },
+  "description": "Streamlines the task of managing and processing Google Forms responses including efficiently updating form items based on reference lists in Google Sheets, validating submitted forms, and sending email notifications for invalid submissions.",
+
   "scripts": {
-    "test": "jest"
+    "format": "prettier --write src/**/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ttsukagoshi/gas-template.git"
+    "url": "git+https://github.com/tsato21/row-height-optimizer"
   },
   "keywords": [
     "google-apps-script",
@@ -22,9 +19,9 @@
   "author": "tigertiger",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ttsukagoshi/gas-template/issues"
+    "url": "https://github.com/tsato21/row-height-optimizer/issues"
   },
-  "homepage": "https://github.com/ttsukagoshi/gas-template#readme",
+  "homepage": "https://tsato21.github.io/gas-tools/each-tool/form-manage-simplifier",
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.64",
