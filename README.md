@@ -1,1 +1,2 @@
-# manage-google-form
+# form-manage-simplifier
+This repository showcases a Google Apps Script tool for managing and processing Google Forms responses including efficiently updating form items based on reference lists in Google Sheets, validating submitted forms, and sending email notifications for invalid submissions.You can find details at [Form Manage Simplifier](https://tsato21.github.io/gas-tools/each-tool/form-manage-simplifier).
