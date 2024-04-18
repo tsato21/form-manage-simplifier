@@ -1,4 +1,4 @@
-function showAuthorizationDialog(){
+function showAuthorizationDialog() {
   FormApp;
   SpreadsheetApp;
   GmailApp;
@@ -19,7 +19,7 @@ function updateCourseLineup() {
   let formId = extractFormIdFromUrl_(FORM_URL);
   let targetForm = FormApp.openById(formId);
   let items = targetForm.getItems(FormApp.ItemType.CHECKBOX);
-  
+
   let ss = SpreadsheetApp.getActiveSpreadsheet();
   let coursesSheet = ss.getSheetByName(COURSES_SHEET_NAME);
 
@@ -39,10 +39,12 @@ function updateCourseLineup() {
     if (column) {
       // Get all values in the column and filter out empty ones
       let allValues = coursesSheet.getRange(column + '2:' + column).getValues();
-      let filteredValues = allValues.filter(value => value[0] !== "");
+      let filteredValues = allValues.filter((value) => value[0] !== '');
 
       // Create choices from the non-empty values
-      let choices = filteredValues.map(course => checkboxItemQuestion.createChoice(course[0]));
+      let choices = filteredValues.map((course) =>
+        checkboxItemQuestion.createChoice(course[0])
+      );
 
       checkboxItemQuestion.setChoices(choices);
     }
@@ -55,13 +57,13 @@ function extractFormIdFromUrl_(formUrl) {
   return matches ? matches[1] : null;
 }
 
-function updateInstructorLine() { 
+function updateInstructorLine() {
   let formId = extractFormIdFromUrl_(FORM_URL);
   let targetForm = FormApp.openById(formId);
   let items = targetForm.getItems(FormApp.ItemType.LIST);
-  
-  for (item of items) { 
-    let listItemQuestion = item.asListItem(); 
+
+  for (item of items) {
+    let listItemQuestion = item.asListItem();
     let eachItem = item;
     let itemTitle = eachItem.getTitle();
     // console.log(eachItemTitle);
@@ -80,11 +82,15 @@ function updateInstructorLine() {
 
     if (column) {
       // Get all values in the column and filter out empty ones
-      let allValues = instructorSheet.getRange(column + '2:' + column).getValues();
+      let allValues = instructorSheet
+        .getRange(column + '2:' + column)
+        .getValues();
       console.log(allValues);
-      let filteredValues = allValues.filter(value => value[0] !== "");
+      let filteredValues = allValues.filter((value) => value[0] !== '');
       console.log(filteredValues);
-      let choices = filteredValues.map(instructor => listItemQuestion.createChoice(instructor[0]));
+      let choices = filteredValues.map((instructor) =>
+        listItemQuestion.createChoice(instructor[0])
+      );
 
       listItemQuestion.setChoices(choices);
     }
@@ -109,22 +115,28 @@ function onFormSubmit(event) {
     if (title.includes(SECOND_OPTION_ITEM_PHRASE)) {
       secondOptionResponse = escapeHtml_(responseObj[title][0]); // Use the first element of the array
     }
-    if (title === "Email Address"){
+    if (title === 'Email Address') {
       email = escapeHtml_(responseObj[title][0]);
     }
-    if (title === "2. Name"){
+    if (title === '2. Name') {
       name = escapeHtml_(responseObj[title][0]);
     }
   }
 
   // Check if both responses exist and if they are the same
-  if (firstOptionResponse && secondOptionResponse && firstOptionResponse === secondOptionResponse) {
+  if (
+    firstOptionResponse &&
+    secondOptionResponse &&
+    firstOptionResponse === secondOptionResponse
+  ) {
     const targetResponses = {
-      'email': email,
-      'name': name,
-      'firstReponse': firstOptionResponse,
-    }
-    console.log("This response is subject to the resubmission. Thus, notification email will be sent.");
+      email: email,
+      name: name,
+      firstReponse: firstOptionResponse,
+    };
+    console.log(
+      'This response is subject to the resubmission. Thus, notification email will be sent.'
+    );
 
     sendNotificationEmail_(targetResponses);
   }
@@ -143,8 +155,8 @@ function sendNotificationEmail_(responseObj) {
   let body = htmlTemplate.evaluate().getContent();
 
   let options = {
-    "htmlBody": body,
-    "cc": CC
+    htmlBody: body,
+    cc: CC,
   };
 
   GmailApp.sendEmail(recipient, subject, '', options);

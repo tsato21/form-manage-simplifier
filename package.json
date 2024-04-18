@@ -2,7 +2,6 @@
   "name": "form-manage-simplifier",
   "version": "1.0.0",
   "description": "Streamlines the task of managing and processing Google Forms responses including efficiently updating form items based on reference lists in Google Sheets, validating submitted forms, and sending email notifications for invalid submissions.",
-
   "scripts": {
     "format": "prettier --write src/**/*"
   },

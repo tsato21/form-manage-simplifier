@@ -1,15 +1,10 @@
-const FORM_URL = 'https://docs.google.com/forms/d/103soniY6qmaRwFnpo9LOEcGD1eMOMrCCa4Y6Rh_s1js/edit#responses'; 
+const FORM_URL =
+  'https://docs.google.com/forms/d/103soniY6qmaRwFnpo9LOEcGD1eMOMrCCa4Y6Rh_s1js/edit#responses';
 
 //Items for Courses
-const AA_COURSES_ITEMS = [
-  "1. Courses in AA Program that you have taken"
-];
-const BB_COURSES_ITEMS = [
-  "1. Courses in BB Program that you have taken"
-];
-const CC_COURSES_ITEMS = [
-  "1. Courses in CC Program that you have taken"
-];
+const AA_COURSES_ITEMS = ['1. Courses in AA Program that you have taken'];
+const BB_COURSES_ITEMS = ['1. Courses in BB Program that you have taken'];
+const CC_COURSES_ITEMS = ['1. Courses in CC Program that you have taken'];
 
 //Items for Instructors
 const AA_INSTRUCTORS_ITEMS = [
@@ -29,6 +24,7 @@ const INSTRUCTORS_SHEET_NAME = 'instructor-lineup';
 
 //Notification Email to Respondents
 const CC = 'tiger.tiger.1223@gmail.com';
-const RESPONSE_SHEET_NAME = "Form Responses 1";
-const FIRST_OPTION_ITEM_PHRASE = "who you would like to work with (1st option)";
-const SECOND_OPTION_ITEM_PHRASE = "who you would like to work with (2nd option)";
+const RESPONSE_SHEET_NAME = 'Form Responses 1';
+const FIRST_OPTION_ITEM_PHRASE = 'who you would like to work with (1st option)';
+const SECOND_OPTION_ITEM_PHRASE =
+  'who you would like to work with (2nd option)';
