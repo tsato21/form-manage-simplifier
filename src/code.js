@@ -1,9 +1,3 @@
-function showAuthorizationDialog() {
-  FormApp;
-  SpreadsheetApp;
-  GmailApp;
-}
-
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
   ui.createMenu('Custom Menu')
